@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace GoldChallenge.Models
 {
     public abstract class Person
     {
+        [Key]
         public int ID { get; set; }
 
         [Required]
@@ -21,6 +23,7 @@ namespace GoldChallenge.Models
         public string FirstName { get; set; }
 
         [Required]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [Required]
@@ -29,14 +32,20 @@ namespace GoldChallenge.Models
         [Required]
         public string City { get; set; }
 
+        // This property will hold a state, selected by user
         [Required]
         public string State { get; set; }
 
-        [Required]
-        public int ZipCode { get; set; }
+        // This property will hold all available states for selection
+        public IEnumerable<SelectListItem> States { get; set; }
 
         [Required]
-        public int Phone { get; set; }
+        [DataType(DataType.PostalCode)]
+        public string ZipCode { get; set; }
+
+        [Required]
+        [DataType(DataType.PhoneNumber)]
+        public string Phone { get; set; }
 
         [Display(Name = "Full Name")]
         public string FullName
