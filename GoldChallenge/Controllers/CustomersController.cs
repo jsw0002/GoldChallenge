@@ -81,11 +81,15 @@ namespace GoldChallenge.Controllers
         // GET: Customers/Edit/5
         public ActionResult Edit(int? id)
         {
+            var states = GetAllStates();
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Customer customer = db.Customers.Find(id);
+            customer.States = GetSelectListItems(states);
+
             if (customer == null)
             {
                 return HttpNotFound();
@@ -100,8 +104,12 @@ namespace GoldChallenge.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,SourceOfLead,LastName,FirstName,Email,Address,City,State,ZipCode,Phone")] Customer customer)
         {
+            var states = GetAllStates();
+            customer.States = GetSelectListItems(states);
+
             if (ModelState.IsValid)
             {
+                Session["Customer"] = customer;
                 db.Entry(customer).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
