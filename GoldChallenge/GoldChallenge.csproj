@@ -189,10 +189,15 @@
     <Compile Include="Migrations\201605041327011_CustomerBackground.Designer.cs">
       <DependentUpon>201605041327011_CustomerBackground.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605041950327_DollarSign.cs" />
+    <Compile Include="Migrations\201605041950327_DollarSign.Designer.cs">
+      <DependentUpon>201605041950327_DollarSign.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CustomerBackground.cs" />
+    <Compile Include="Models\CustomerPreferences.cs" />
     <Compile Include="Models\FranchiseContact.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -291,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605041327011_CustomerBackground.resx">
       <DependentUpon>201605041327011_CustomerBackground.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605041950327_DollarSign.resx">
+      <DependentUpon>201605041950327_DollarSign.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

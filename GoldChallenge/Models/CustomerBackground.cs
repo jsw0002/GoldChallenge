@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -51,18 +52,23 @@ namespace GoldChallenge.Models
         public bool HaveYouOwnedABusinessBefore { get; set; }
 
         [Display(Name = "What is your credit score?")]
+        //[Range(300, 850)]
         public string CreditScore { get; set; }
         
         [Required]
         [Display(Name = "How much do you plan to invest in cash?")]
-        public string CashInvestment { get; set; }
+        [DataType(DataType.Currency)]
+        [Column(TypeName = "money")]
+        public decimal CashInvestment { get; set; }
 
         [Required]
         [Display(Name = "Where will your investment be coming from?")]
         public string InvestmentSource { get; set; }
 
         [Display(Name = "What is your net worth?")]
-        public string NetWorth { get; set; }
+        [DataType(DataType.Currency)]
+        [Column(TypeName = "money")]
+        public decimal NetWorth { get; set; }
 
         [Required]
         [Display(Name = "Where would you like your business to be located?")]
@@ -70,6 +76,7 @@ namespace GoldChallenge.Models
 
         [Required]
         [Display(Name = "Why are you looking for a business?")]
+        [DataType(DataType.MultilineText)]
         public string WhyAreYouLookingAtBusinesses { get; set; }
 
         [Required]
