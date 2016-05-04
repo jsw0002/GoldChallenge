@@ -1,13 +1,13 @@
 ﻿@model GoldChallenge.Models.CustomerBackground
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "You Background Details";
 }
 
-<h2>Details</h2>
+<h2>@ViewBag.Title</h2>
 
 <div>
-    <h4>CustomerBackground</h4>
+    <h4></h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -15,7 +15,14 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.AreThereAnyOtherDecisionMakers)
+            @if (Model.AreThereAnyOtherDecisionMakers == true)
+            {
+                <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
         </dd>
 
         <dt>
@@ -23,7 +30,14 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.IsMarried)
+            @if (Model.IsMarried == true)
+            {
+                <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
         </dd>
 
         <dt>
@@ -87,7 +101,14 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.AreYouAVet)
+            @if (Model.AreYouAVet == true)
+            {
+                <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
         </dd>
 
         <dt>
@@ -95,7 +116,14 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.HaveYouOwnedABusinessBefore)
+            @if (Model.HaveYouOwnedABusinessBefore == true)
+            {
+                <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
         </dd>
 
         <dt>
@@ -159,7 +187,14 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.SpokenWithAnyoneElse)
+            @if (Model.SpokenWithAnyoneElse == true)
+            {
+                <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
         </dd>
 
     </dl>

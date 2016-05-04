@@ -4,7 +4,7 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h2>@ViewBag.Title</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
@@ -16,7 +16,14 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.AreThereAnyOtherDecisionMakers)
+            @if (Model.AreThereAnyOtherDecisionMakers == true)
+            {
+                <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
         </dd>
 
         <dt>
@@ -24,7 +31,14 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.IsMarried)
+            @if (Model.IsMarried == true)
+            {
+                <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
         </dd>
 
         <dt>
@@ -88,7 +102,14 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.AreYouAVet)
+            @if (Model.AreYouAVet == true)
+            {
+                <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
         </dd>
 
         <dt>
@@ -96,7 +117,14 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.HaveYouOwnedABusinessBefore)
+            @if (Model.HaveYouOwnedABusinessBefore == true)
+            {
+                <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
         </dd>
 
         <dt>
@@ -160,7 +188,14 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.SpokenWithAnyoneElse)
+            @if (Model.SpokenWithAnyoneElse == true)
+            {
+                <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
         </dd>
 
     </dl>
