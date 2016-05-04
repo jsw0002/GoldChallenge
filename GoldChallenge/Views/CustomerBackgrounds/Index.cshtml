@@ -1,0 +1,141 @@
+﻿@model IEnumerable<GoldChallenge.Models.CustomerBackground>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AreThereAnyOtherDecisionMakers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsMarried)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpouseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentOccupation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfessionalBackground1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfessionalBackground2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfessionalBackground3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfessionalBackground4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfessionalBackground5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreYouAVet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HaveYouOwnedABusinessBefore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditScore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CashInvestment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InvestmentSource)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NetWorth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DesiredMarket)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WhyAreYouLookingAtBusinesses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LengthOfTimeLooking)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpokenWithAnyoneElse)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreThereAnyOtherDecisionMakers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsMarried)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpouseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentOccupation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProfessionalBackground1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProfessionalBackground2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProfessionalBackground3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProfessionalBackground4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProfessionalBackground5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreYouAVet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HaveYouOwnedABusinessBefore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditScore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CashInvestment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InvestmentSource)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NetWorth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DesiredMarket)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WhyAreYouLookingAtBusinesses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LengthOfTimeLooking)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpokenWithAnyoneElse)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CustomerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CustomerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CustomerID })
+        </td>
+    </tr>
+}
+
+</table>

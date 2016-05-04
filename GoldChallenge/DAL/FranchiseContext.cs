@@ -15,5 +15,6 @@ namespace GoldChallenge.DAL
 
         public DbSet<Customer> Customers { get; set; }
         public DbSet<FranchiseContact> FranchiseContacts { get; set; }
+        public DbSet<CustomerBackground> CustomerBackgrounds { get; set; }
     }
 }

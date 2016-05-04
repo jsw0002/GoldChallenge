@@ -1,0 +1,170 @@
+﻿@model GoldChallenge.Models.CustomerBackground
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CustomerBackground</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AreThereAnyOtherDecisionMakers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AreThereAnyOtherDecisionMakers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsMarried)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsMarried)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpouseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpouseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentOccupation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentOccupation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfessionalBackground1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfessionalBackground1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfessionalBackground2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfessionalBackground2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfessionalBackground3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfessionalBackground3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfessionalBackground4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfessionalBackground4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfessionalBackground5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfessionalBackground5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AreYouAVet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AreYouAVet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HaveYouOwnedABusinessBefore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HaveYouOwnedABusinessBefore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CashInvestment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CashInvestment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvestmentSource)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvestmentSource)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NetWorth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NetWorth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DesiredMarket)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DesiredMarket)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WhyAreYouLookingAtBusinesses)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WhyAreYouLookingAtBusinesses)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LengthOfTimeLooking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LengthOfTimeLooking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpokenWithAnyoneElse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpokenWithAnyoneElse)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
