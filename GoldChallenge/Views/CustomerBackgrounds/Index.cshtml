@@ -74,10 +74,24 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.AreThereAnyOtherDecisionMakers)
+            @if (item.AreThereAnyOtherDecisionMakers == true)
+            {
+                <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.IsMarried)
+            @if (item.IsMarried == true)
+            {
+                <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.SpouseName)
@@ -101,10 +115,24 @@
             @Html.DisplayFor(modelItem => item.ProfessionalBackground5)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.AreYouAVet)
+            @if (item.AreYouAVet == true)
+            {
+                <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.HaveYouOwnedABusinessBefore)
+            @if (item.HaveYouOwnedABusinessBefore == true)
+            {
+                <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CreditScore)
@@ -128,7 +156,14 @@
             @Html.DisplayFor(modelItem => item.LengthOfTimeLooking)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.SpokenWithAnyoneElse)
+            @if (item.SpokenWithAnyoneElse == true)
+            {
+                <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.CustomerID }) |

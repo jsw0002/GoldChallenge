@@ -18,8 +18,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.AreThereAnyOtherDecisionMakers, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.AreThereAnyOtherDecisionMakers)
+                <div>
+                    @Html.RadioButtonFor(model => model.AreThereAnyOtherDecisionMakers, "true") Yes
+                    @Html.RadioButtonFor(model => model.AreThereAnyOtherDecisionMakers, "false") No
                     @Html.ValidationMessageFor(model => model.AreThereAnyOtherDecisionMakers, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -28,8 +29,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.IsMarried, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.IsMarried)
+                <div>
+                    @Html.RadioButtonFor(model => model.IsMarried, "true") Yes
+                    @Html.RadioButtonFor(model => model.IsMarried, "false") No
                     @Html.ValidationMessageFor(model => model.IsMarried, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -94,8 +96,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.AreYouAVet, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.AreYouAVet)
+                <div>
+                    @Html.RadioButtonFor(model => model.AreYouAVet, "true") Yes
+                    @Html.RadioButtonFor(model => model.AreYouAVet, "false") No
                     @Html.ValidationMessageFor(model => model.AreYouAVet, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -104,8 +107,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.HaveYouOwnedABusinessBefore, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.HaveYouOwnedABusinessBefore)
+                <div>
+                    @Html.RadioButtonFor(model => model.HaveYouOwnedABusinessBefore, "true") Yes
+                    @Html.RadioButtonFor(model => model.HaveYouOwnedABusinessBefore, "false") No
                     @Html.ValidationMessageFor(model => model.HaveYouOwnedABusinessBefore, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -170,8 +174,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.SpokenWithAnyoneElse, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.SpokenWithAnyoneElse)
+                <div>
+                    @Html.RadioButtonFor(model => model.SpokenWithAnyoneElse, "true") Yes
+                    @Html.RadioButtonFor(model => model.SpokenWithAnyoneElse, "false") No
                     @Html.ValidationMessageFor(model => model.SpokenWithAnyoneElse, "", new { @class = "text-danger" })
                 </div>
             </div>
