@@ -166,8 +166,18 @@
         <div class="form-group">
             @Html.LabelFor(model => model.LengthOfTimeLooking, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.LengthOfTimeLooking, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LengthOfTimeLooking, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(model => model.LengthOfTimeLooking, // 1. Store selected value in Model.State;
+                                                            // when page is rendered after postback,
+                                                            // take selected value from Model.State.
+
+                                              // 2. Take list of values from Model.States
+                                              Model.LengthOfTimeLookingDropDown,
+
+                                              // 3. Text for the first 'default' option
+                                              "- Please select a legth of time -",
+
+                                              //4. A class name to assign to <select> tag
+                                              new { @class = "form-control" })
             </div>
         </div>
 

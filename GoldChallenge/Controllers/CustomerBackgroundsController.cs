@@ -39,7 +39,15 @@ namespace GoldChallenge.Controllers
         // GET: CustomerBackgrounds/Create
         public ActionResult Create()
         {
-            return View();
+            // Let's get all states that we need for a DropDownList
+            var timeLooking = GetAllTimeLooking();
+
+            var model = new CustomerBackground();
+
+            // Create a list of SelectListItems so these can be rendered on the page
+            model.LengthOfTimeLookingDropDown = GetSelectListItems(timeLooking);
+
+            return View(model);
         }
 
         // POST: CustomerBackgrounds/Create
@@ -49,24 +57,33 @@ namespace GoldChallenge.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CustomerID,AreThereAnyOtherDecisionMakers,IsMarried,SpouseName,CurrentOccupation,ProfessionalBackground1,ProfessionalBackground2,ProfessionalBackground3,ProfessionalBackground4,ProfessionalBackground5,AreYouAVet,HaveYouOwnedABusinessBefore,CreditScore,CashInvestment,InvestmentSource,NetWorth,DesiredMarket,WhyAreYouLookingAtBusinesses,LengthOfTimeLooking,SpokenWithAnyoneElse")] CustomerBackground customerBackground)
         {
+            var timeLooking = GetAllTimeLooking();
+
+            customerBackground.LengthOfTimeLookingDropDown = GetSelectListItems(timeLooking);
+
             if (ModelState.IsValid)
             {
+                Session["CustomerBackground"] = customerBackground;
                 db.CustomerBackgrounds.Add(customerBackground);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(customerBackground);
+            return View("Create", customerBackground);
         }
 
         // GET: CustomerBackgrounds/Edit/5
         public ActionResult Edit(int? id)
         {
+            var timeLooking = GetAllTimeLooking();
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             CustomerBackground customerBackground = db.CustomerBackgrounds.Find(id);
+            customerBackground.LengthOfTimeLookingDropDown = GetSelectListItems(timeLooking);
+
             if (customerBackground == null)
             {
                 return HttpNotFound();
@@ -81,8 +98,12 @@ namespace GoldChallenge.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "CustomerID,AreThereAnyOtherDecisionMakers,IsMarried,SpouseName,CurrentOccupation,ProfessionalBackground1,ProfessionalBackground2,ProfessionalBackground3,ProfessionalBackground4,ProfessionalBackground5,AreYouAVet,HaveYouOwnedABusinessBefore,CreditScore,CashInvestment,InvestmentSource,NetWorth,DesiredMarket,WhyAreYouLookingAtBusinesses,LengthOfTimeLooking,SpokenWithAnyoneElse")] CustomerBackground customerBackground)
         {
+            var timeLooking = GetAllTimeLooking();
+            customerBackground.LengthOfTimeLookingDropDown = GetSelectListItems(timeLooking);
+
             if (ModelState.IsValid)
             {
+                Session["CustomerBackground"] = customerBackground;
                 db.Entry(customerBackground).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -114,6 +135,44 @@ namespace GoldChallenge.Controllers
             db.CustomerBackgrounds.Remove(customerBackground);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        // Just return a list of states - in a real-world application this would call
+        // into data access layer to retrieve states from a database.
+        private IEnumerable<string> GetAllTimeLooking()
+        {
+            return new List<string>
+            {
+                "0-3 Months",
+                "3-6 Months",
+                "6-12 Months",
+                "1 Year +"
+            };
+        }
+
+        // This is one of the most important parts in the whole example.
+        // This function takes a list of strings and returns a list of SelectListItem objects.
+        // These objects are going to be used later in the SignUp.html template to render the
+        // DropDownList.
+        private IEnumerable<SelectListItem> GetSelectListItems(IEnumerable<string> elements)
+        {
+            // Create an empty list to hold result of the operation
+            var selectList = new List<SelectListItem>();
+
+            // For each string in the 'elements' variable, create a new SelectListItem object
+            // that has both its Value and Text properties set to a particular value.
+            // This will result in MVC rendering each item as:
+            //     <option value="State Name">State Name</option>
+            foreach (var element in elements)
+            {
+                selectList.Add(new SelectListItem
+                {
+                    Value = element,
+                    Text = element
+                });
+            }
+
+            return selectList;
         }
 
         protected override void Dispose(bool disposing)
