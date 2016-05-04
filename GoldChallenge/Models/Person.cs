@@ -41,6 +41,7 @@ namespace GoldChallenge.Models
 
         [Required]
         [DataType(DataType.PostalCode)]
+        [Display(Name = "Zip Code")]
         public string ZipCode { get; set; }
 
         [Required]
