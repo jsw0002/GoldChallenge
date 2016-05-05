@@ -47,7 +47,7 @@ namespace GoldChallenge.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CustomerID,IdealSituation,BusinessPreference,StaffSizePreference,MultipleLocations,WhatIsYourTimeFrame,SalesSkills,ColdCalling,DirectVsAdvertising,WhiteVsBlueColar,EstablishedVsNewConcept,SmallVsLargeFranchiseSystem,CompetitiveVsOnlyGameInTown,PrestigeOrNotImportant,BusinessToBusinessVsBusinessToConsumer,HoursPreference,AnyMoreInformation")] CustomerPreference customerPreference)
+        public ActionResult Create([Bind(Include = "CustomerID,IdealSituation,BusinessPreference,StaffSizePreference,MultipleLocations,WhatIsYourTimeFrame,SalesSkills,ColdCallingPhone,ColdCallingInPerson,DirectVsAdvertising,WhiteVsBlueColar,EstablishedVsNewConcept,SmallVsLargeFranchiseSystem,CompetitiveVsOnlyGameInTown,PrestigeOrNotImportant,BusinessToBusinessVsBusinessToConsumer,HoursPreference,AnyMoreInformation")] CustomerPreference customerPreference)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace GoldChallenge.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CustomerID,IdealSituation,BusinessPreference,StaffSizePreference,MultipleLocations,WhatIsYourTimeFrame,SalesSkills,ColdCalling,DirectVsAdvertising,WhiteVsBlueColar,EstablishedVsNewConcept,SmallVsLargeFranchiseSystem,CompetitiveVsOnlyGameInTown,PrestigeOrNotImportant,BusinessToBusinessVsBusinessToConsumer,HoursPreference,AnyMoreInformation")] CustomerPreference customerPreference)
+        public ActionResult Edit([Bind(Include = "CustomerID,IdealSituation,BusinessPreference,StaffSizePreference,MultipleLocations,WhatIsYourTimeFrame,SalesSkills,ColdCallingPhone,ColdCallingInPerson,DirectVsAdvertising,WhiteVsBlueColar,EstablishedVsNewConcept,SmallVsLargeFranchiseSystem,CompetitiveVsOnlyGameInTown,PrestigeOrNotImportant,BusinessToBusinessVsBusinessToConsumer,HoursPreference,AnyMoreInformation")] CustomerPreference customerPreference)
         {
             if (ModelState.IsValid)
             {
