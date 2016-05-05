@@ -162,7 +162,7 @@ namespace GoldChallenge.Controllers
             // For each string in the 'elements' variable, create a new SelectListItem object
             // that has both its Value and Text properties set to a particular value.
             // This will result in MVC rendering each item as:
-            //     <option value="State Name">State Name</option>
+            //     <option value="Time Looking">Time Looking</option>
             foreach (var element in elements)
             {
                 selectList.Add(new SelectListItem
