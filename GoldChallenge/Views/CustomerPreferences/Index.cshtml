@@ -1,0 +1,123 @@
+﻿@model IEnumerable<GoldChallenge.Models.CustomerPreference>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdealSituation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessPreference)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StaffSizePreference)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MultipleLocations)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WhatIsYourTimeFrame)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SalesSkills)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ColdCalling)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DirectVsAdvertising)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WhiteVsBlueColar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstablishedVsNewConcept)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SmallVsLargeFranchiseSystem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompetitiveVsOnlyGameInTown)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrestigeOrNotImportant)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessToBusinessVsBusinessToConsumer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoursPreference)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnyMoreInformation)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdealSituation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessPreference)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StaffSizePreference)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MultipleLocations)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WhatIsYourTimeFrame)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalesSkills)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ColdCalling)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DirectVsAdvertising)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WhiteVsBlueColar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstablishedVsNewConcept)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SmallVsLargeFranchiseSystem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompetitiveVsOnlyGameInTown)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrestigeOrNotImportant)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessToBusinessVsBusinessToConsumer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoursPreference)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnyMoreInformation)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CustomerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CustomerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CustomerID })
+        </td>
+    </tr>
+}
+
+</table>

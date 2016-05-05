@@ -1,0 +1,146 @@
+﻿@model GoldChallenge.Models.CustomerPreference
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CustomerPreference</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdealSituation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdealSituation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessPreference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessPreference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StaffSizePreference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StaffSizePreference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MultipleLocations)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MultipleLocations)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WhatIsYourTimeFrame)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WhatIsYourTimeFrame)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalesSkills)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalesSkills)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ColdCalling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ColdCalling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DirectVsAdvertising)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DirectVsAdvertising)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WhiteVsBlueColar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WhiteVsBlueColar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstablishedVsNewConcept)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstablishedVsNewConcept)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SmallVsLargeFranchiseSystem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SmallVsLargeFranchiseSystem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompetitiveVsOnlyGameInTown)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompetitiveVsOnlyGameInTown)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrestigeOrNotImportant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrestigeOrNotImportant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessToBusinessVsBusinessToConsumer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessToBusinessVsBusinessToConsumer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoursPreference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoursPreference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnyMoreInformation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnyMoreInformation)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

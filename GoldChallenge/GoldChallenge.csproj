@@ -169,10 +169,12 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomerBackgroundsController.cs" />
+    <Compile Include="Controllers\CustomerPreferencesController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\FranchiseContactsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NetWorthCalculatorsController.cs" />
     <Compile Include="DAL\FranchiseContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -193,14 +195,23 @@
     <Compile Include="Migrations\201605041950327_DollarSign.Designer.cs">
       <DependentUpon>201605041950327_DollarSign.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605051853121_NetWorthCalc.cs" />
+    <Compile Include="Migrations\201605051853121_NetWorthCalc.Designer.cs">
+      <DependentUpon>201605051853121_NetWorthCalc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605051911599_ReOrganized.cs" />
+    <Compile Include="Migrations\201605051911599_ReOrganized.Designer.cs">
+      <DependentUpon>201605051911599_ReOrganized.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CustomerBackground.cs" />
-    <Compile Include="Models\CustomerPreferences.cs" />
+    <Compile Include="Models\CustomerPreference.cs" />
     <Compile Include="Models\FranchiseContact.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NetWorthCalculator.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -275,6 +286,16 @@
     <Content Include="Views\CustomerBackgrounds\Details.cshtml" />
     <Content Include="Views\CustomerBackgrounds\Edit.cshtml" />
     <Content Include="Views\CustomerBackgrounds\Index.cshtml" />
+    <Content Include="Views\NetWorthCalculators\Create.cshtml" />
+    <Content Include="Views\NetWorthCalculators\Delete.cshtml" />
+    <Content Include="Views\NetWorthCalculators\Details.cshtml" />
+    <Content Include="Views\NetWorthCalculators\Edit.cshtml" />
+    <Content Include="Views\NetWorthCalculators\Index.cshtml" />
+    <Content Include="Views\CustomerPreferences\Create.cshtml" />
+    <Content Include="Views\CustomerPreferences\Delete.cshtml" />
+    <Content Include="Views\CustomerPreferences\Details.cshtml" />
+    <Content Include="Views\CustomerPreferences\Edit.cshtml" />
+    <Content Include="Views\CustomerPreferences\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -299,6 +320,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605041950327_DollarSign.resx">
       <DependentUpon>201605041950327_DollarSign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605051853121_NetWorthCalc.resx">
+      <DependentUpon>201605051853121_NetWorthCalc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605051911599_ReOrganized.resx">
+      <DependentUpon>201605051911599_ReOrganized.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

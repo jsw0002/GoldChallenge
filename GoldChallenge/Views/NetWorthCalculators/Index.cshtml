@@ -1,0 +1,129 @@
+﻿@model IEnumerable<GoldChallenge.Models.NetWorthCalculator>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CashInCheckingAndSavings)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StocksBondsMutualFunds)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ira401kOtherRetirementPlans)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RealEstateHome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RealEstateOther)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AppraisedCollectibles)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MoneyOwedToYou)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OtherAssets)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MortgageHome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MortgageOther)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChargeAccountsCreditCards)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AutomobileLoans)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OtherLiabilities)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalAssets)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalLiabilities)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaMinusTl)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CashInCheckingAndSavings)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StocksBondsMutualFunds)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ira401kOtherRetirementPlans)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RealEstateHome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RealEstateOther)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AppraisedCollectibles)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MoneyOwedToYou)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OtherAssets)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MortgageHome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MortgageOther)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChargeAccountsCreditCards)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AutomobileLoans)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OtherLiabilities)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalAssets)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalLiabilities)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaMinusTl)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CustomerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CustomerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CustomerID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,154 @@
+﻿@model GoldChallenge.Models.NetWorthCalculator
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NetWorthCalculator</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CashInCheckingAndSavings)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CashInCheckingAndSavings)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StocksBondsMutualFunds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StocksBondsMutualFunds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ira401kOtherRetirementPlans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ira401kOtherRetirementPlans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RealEstateHome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RealEstateHome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RealEstateOther)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RealEstateOther)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppraisedCollectibles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppraisedCollectibles)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MoneyOwedToYou)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoneyOwedToYou)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OtherAssets)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtherAssets)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MortgageHome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MortgageHome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MortgageOther)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MortgageOther)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChargeAccountsCreditCards)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChargeAccountsCreditCards)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AutomobileLoans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AutomobileLoans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OtherLiabilities)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtherLiabilities)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalAssets)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalAssets)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalLiabilities)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalLiabilities)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaMinusTl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaMinusTl)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
