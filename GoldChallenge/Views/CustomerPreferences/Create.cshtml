@@ -42,8 +42,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.MultipleLocations, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.MultipleLocations)
+                <div>
+                    @Html.RadioButtonFor(model => model.MultipleLocations, "true") Yes
+                    @Html.RadioButtonFor(model => model.MultipleLocations, "false") No
                     @Html.ValidationMessageFor(model => model.MultipleLocations, "", new { @class = "text-danger" })
                 </div>
             </div>
