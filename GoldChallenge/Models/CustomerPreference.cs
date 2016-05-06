@@ -13,7 +13,6 @@ namespace GoldChallenge.Models
         public int CustomerID { get; set; }
 
         // Full-time, part-time, or passive
-        [Display(Name = "What is your ideal situation?")]
         public IdealSituationType IdealSituation { get; set; }
 
         public enum IdealSituationType
@@ -26,7 +25,6 @@ namespace GoldChallenge.Models
         }
 
         // Owner Operator vs Executive Model
-        [Display(Name = "What type of business do you prefer?")]
         public BusinessPreferenceType BusinessPreference { get; set; }
 
         public enum BusinessPreferenceType
@@ -39,7 +37,6 @@ namespace GoldChallenge.Models
             ExecutiveModel
         }
 
-        [Display(Name = "Do you have a preference for staff size?")]
         public StaffSizePreferenceType StaffSizePreference { get; set; }
 
         public enum StaffSizePreferenceType
@@ -53,16 +50,18 @@ namespace GoldChallenge.Models
             
         }
 
-        [Display(Name = "Are you open to multiple locations?")]
+        [Display(Name = "")]
         public bool MultipleLocations { get; set; }
 
         // Examples income, building equity, the number hours, schedule flexibility, home-based, recognition/prestige, 
         // expansion, helping others, ease of operation having employees or not, enjoyment
-        [Display(Name = "What are the top 3 things that are most important to you in the perfect business?")]
+        [Display(Name = "Top Ranked")]
         public string TopThreePerfectBusinessOpportunity1 { get; set; }
 
+        [Display(Name = "Second Ranked")]
         public string TopThreePerfectBusinessOpportunity2 { get; set; }
 
+        [Display(Name = "Third Ranked")]
         public string TopThreePerfectBusinessOpportunity3 { get; set; }
 
         [Display(Name = "Rank these skills 1-5 with 1 being your strongest skill or quality.")]

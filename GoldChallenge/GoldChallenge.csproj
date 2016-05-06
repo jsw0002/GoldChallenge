@@ -199,9 +199,9 @@
     <Compile Include="Migrations\201605051853121_NetWorthCalc.Designer.cs">
       <DependentUpon>201605051853121_NetWorthCalc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201605061554003_ChangedPreferences.cs" />
-    <Compile Include="Migrations\201605061554003_ChangedPreferences.Designer.cs">
-      <DependentUpon>201605061554003_ChangedPreferences.cs</DependentUpon>
+    <Compile Include="Migrations\201605061848375_ChangedPreferences.cs" />
+    <Compile Include="Migrations\201605061848375_ChangedPreferences.Designer.cs">
+      <DependentUpon>201605061848375_ChangedPreferences.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -324,8 +324,8 @@
     <EmbeddedResource Include="Migrations\201605051853121_NetWorthCalc.resx">
       <DependentUpon>201605051853121_NetWorthCalc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605061554003_ChangedPreferences.resx">
-      <DependentUpon>201605061554003_ChangedPreferences.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201605061848375_ChangedPreferences.resx">
+      <DependentUpon>201605061848375_ChangedPreferences.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

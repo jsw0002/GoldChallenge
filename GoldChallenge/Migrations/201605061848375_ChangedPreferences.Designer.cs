@@ -13,7 +13,7 @@ namespace GoldChallenge.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201605061554003_ChangedPreferences"; }
+            get { return "201605061848375_ChangedPreferences"; }
         }
         
         string IMigrationMetadata.Source
