@@ -24,10 +24,46 @@
             @Html.DisplayNameFor(model => model.MultipleLocations)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.TopThreePerfectBusinessOpportunity1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TopThreePerfectBusinessOpportunity2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TopThreePerfectBusinessOpportunity3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RankTheseSkills1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RankTheseSkills2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RankTheseSkills3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RankTheseSkills4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RankTheseSkills5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TopThreeNonBusinessSkills1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TopThreeNonBusinessSkills2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TopThreeNonBusinessSkills3)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.WhatIsYourTimeFrame)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.SalesSkills)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SalesSkillsExplanation)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ColdCallingPhone)
@@ -57,7 +93,19 @@
             @Html.DisplayNameFor(model => model.BusinessToBusinessVsBusinessToConsumer)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.HoursPreference)
+            @Html.DisplayNameFor(model => model.HoursPreferenceMonFri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoursPreferenceNoNights)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoursPreferenceNoSaturdays)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoursPreferenceNoSundays)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoursPreferenceNoPreference)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.AnyMoreInformation)
@@ -77,20 +125,49 @@
             @Html.DisplayFor(modelItem => item.StaffSizePreference)
         </td>
         <td>
-            @if (item.MultipleLocations == true)
-            {
-                <p>Yes</p>
-            }
-            else
-            {
-                <p>No</p>
-            }
+            @Html.DisplayFor(modelItem => item.MultipleLocations)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TopThreePerfectBusinessOpportunity1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TopThreePerfectBusinessOpportunity2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TopThreePerfectBusinessOpportunity3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RankTheseSkills1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RankTheseSkills2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RankTheseSkills3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RankTheseSkills4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RankTheseSkills5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TopThreeNonBusinessSkills1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TopThreeNonBusinessSkills2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TopThreeNonBusinessSkills3)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.WhatIsYourTimeFrame)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.SalesSkills)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalesSkillsExplanation)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ColdCallingPhone)
@@ -120,7 +197,19 @@
             @Html.DisplayFor(modelItem => item.BusinessToBusinessVsBusinessToConsumer)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.HoursPreference)
+            @Html.DisplayFor(modelItem => item.HoursPreferenceMonFri)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoursPreferenceNoNights)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoursPreferenceNoSaturdays)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoursPreferenceNoSundays)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoursPreferenceNoPreference)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.AnyMoreInformation)

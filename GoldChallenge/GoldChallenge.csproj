@@ -207,6 +207,14 @@
     <Compile Include="Migrations\201605051959530_Changedsomepreferences.Designer.cs">
       <DependentUpon>201605051959530_Changedsomepreferences.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605060142526_Changedpreferences.cs" />
+    <Compile Include="Migrations\201605060142526_Changedpreferences.Designer.cs">
+      <DependentUpon>201605060142526_Changedpreferences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605061459570_ChangedpreferencesAgain.cs" />
+    <Compile Include="Migrations\201605061459570_ChangedpreferencesAgain.Designer.cs">
+      <DependentUpon>201605061459570_ChangedpreferencesAgain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -333,6 +341,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605051959530_Changedsomepreferences.resx">
       <DependentUpon>201605051959530_Changedsomepreferences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605060142526_Changedpreferences.resx">
+      <DependentUpon>201605060142526_Changedpreferences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605061459570_ChangedpreferencesAgain.resx">
+      <DependentUpon>201605061459570_ChangedpreferencesAgain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

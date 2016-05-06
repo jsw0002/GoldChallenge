@@ -47,7 +47,7 @@ namespace GoldChallenge.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CustomerID,IdealSituation,BusinessPreference,StaffSizePreference,MultipleLocations,WhatIsYourTimeFrame,SalesSkills,ColdCallingPhone,ColdCallingInPerson,DirectVsAdvertising,WhiteVsBlueColar,EstablishedVsNewConcept,SmallVsLargeFranchiseSystem,CompetitiveVsOnlyGameInTown,PrestigeOrNotImportant,BusinessToBusinessVsBusinessToConsumer,HoursPreference,AnyMoreInformation")] CustomerPreference customerPreference)
+        public ActionResult Create([Bind(Include = "CustomerID,IdealSituation,BusinessPreference,StaffSizePreference,MultipleLocations,TopThreePerfectBusinessOpportunity1,TopThreePerfectBusinessOpportunity2,TopThreePerfectBusinessOpportunity3,RankTheseSkills1,RankTheseSkills2,RankTheseSkills3,RankTheseSkills4,RankTheseSkills5,TopThreeNonBusinessSkills1,TopThreeNonBusinessSkills2,TopThreeNonBusinessSkills3,WhatIsYourTimeFrame,SalesSkills,SalesSkillsExplanation,ColdCallingPhone,ColdCallingInPerson,DirectVsAdvertising,WhiteVsBlueColar,EstablishedVsNewConcept,SmallVsLargeFranchiseSystem,CompetitiveVsOnlyGameInTown,PrestigeOrNotImportant,BusinessToBusinessVsBusinessToConsumer,HoursPreferenceMonFri,HoursPreferenceNoNights,HoursPreferenceNoSaturdays,HoursPreferenceNoSundays,HoursPreferenceNoPreference,AnyMoreInformation")] CustomerPreference customerPreference)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace GoldChallenge.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CustomerID,IdealSituation,BusinessPreference,StaffSizePreference,MultipleLocations,WhatIsYourTimeFrame,SalesSkills,ColdCallingPhone,ColdCallingInPerson,DirectVsAdvertising,WhiteVsBlueColar,EstablishedVsNewConcept,SmallVsLargeFranchiseSystem,CompetitiveVsOnlyGameInTown,PrestigeOrNotImportant,BusinessToBusinessVsBusinessToConsumer,HoursPreference,AnyMoreInformation")] CustomerPreference customerPreference)
+        public ActionResult Edit([Bind(Include = "CustomerID,IdealSituation,BusinessPreference,StaffSizePreference,MultipleLocations,TopThreePerfectBusinessOpportunity1,TopThreePerfectBusinessOpportunity2,TopThreePerfectBusinessOpportunity3,RankTheseSkills1,RankTheseSkills2,RankTheseSkills3,RankTheseSkills4,RankTheseSkills5,TopThreeNonBusinessSkills1,TopThreeNonBusinessSkills2,TopThreeNonBusinessSkills3,WhatIsYourTimeFrame,SalesSkills,SalesSkillsExplanation,ColdCallingPhone,ColdCallingInPerson,DirectVsAdvertising,WhiteVsBlueColar,EstablishedVsNewConcept,SmallVsLargeFranchiseSystem,CompetitiveVsOnlyGameInTown,PrestigeOrNotImportant,BusinessToBusinessVsBusinessToConsumer,HoursPreferenceMonFri,HoursPreferenceNoNights,HoursPreferenceNoSaturdays,HoursPreferenceNoSundays,HoursPreferenceNoPreference,AnyMoreInformation")] CustomerPreference customerPreference)
         {
             if (ModelState.IsValid)
             {
