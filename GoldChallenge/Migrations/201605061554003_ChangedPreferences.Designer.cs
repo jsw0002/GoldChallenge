@@ -7,13 +7,13 @@ namespace GoldChallenge.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Changedsomepreferences : IMigrationMetadata
+    public sealed partial class ChangedPreferences : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Changedsomepreferences));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ChangedPreferences));
         
         string IMigrationMetadata.Id
         {
-            get { return "201605051959530_Changedsomepreferences"; }
+            get { return "201605061554003_ChangedPreferences"; }
         }
         
         string IMigrationMetadata.Source

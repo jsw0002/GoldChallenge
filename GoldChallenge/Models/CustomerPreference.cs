@@ -14,14 +14,44 @@ namespace GoldChallenge.Models
 
         // Full-time, part-time, or passive
         [Display(Name = "What is your ideal situation?")]
-        public bool IdealSituation { get; set; }
+        public IdealSituationType IdealSituation { get; set; }
+
+        public enum IdealSituationType
+        {
+            [Display(Name = "Full time")]
+            Fulltime,
+            [Display(Name = "Part time")]
+            Parttime,
+            Passive
+        }
 
         // Owner Operator vs Executive Model
         [Display(Name = "What type of business do you prefer?")]
-        public bool BusinessPreference { get; set; }
+        public BusinessPreferenceType BusinessPreference { get; set; }
+
+        public enum BusinessPreferenceType
+        {
+            [Display(Name = "No Preference")]
+            NoPreference,
+            [Display(Name = "Owner Operator")]
+            OwnerOperator,
+            [Display(Name = "Executive Model")]
+            ExecutiveModel
+        }
 
         [Display(Name = "Do you have a preference for staff size?")]
-        public bool StaffSizePreference { get; set; }
+        public StaffSizePreferenceType StaffSizePreference { get; set; }
+
+        public enum StaffSizePreferenceType
+        {
+            [Display(Name = "No Preference")]
+            NoPreference,
+            [Display(Name = "Small Staff")]
+            SmallStaff,
+            [Display(Name = "Large Staff")]
+            LargeStaff
+            
+        }
 
         [Display(Name = "Are you open to multiple locations?")]
         public bool MultipleLocations { get; set; }
@@ -63,22 +93,71 @@ namespace GoldChallenge.Models
         public string WhatIsYourTimeFrame { get; set; }
 
         [Display(Name = "On a scale of 1-10 with 1 being the highest, how would you rank your overall sales skills?")]
-        public string SalesSkills { get; set; }
+        public SalesSkillsType SalesSkills { get; set; }
 
-        public IEnumerable<SelectListItem> SalesSkillsDropDown { get; set; }
+        public enum SalesSkillsType
+        {
+            [Display(Name = "1")]
+            One,
+            [Display(Name = "2")]
+            Two,
+            [Display(Name = "3")]
+            Three,
+            [Display(Name = "4")]
+            Four,
+            [Display(Name = "5")]
+            Five,
+            [Display(Name = "6")]
+            Six,
+            [Display(Name = "7")]
+            Seven,
+            [Display(Name = "8")]
+            Eight,
+            [Display(Name = "9")]
+            Nine,
+            [Display(Name = "10")]
+            Ten
+        }
 
         [Display(Name = "Why?")]
+        [DataType(DataType.MultilineText)]
         public string SalesSkillsExplanation { get; set; }
 
         [Display(Name = "How do you feel about warm (or cold) calling on the phone?")]
-        public bool ColdCallingPhone { get; set; }
+        public ColdCallingPhoneType ColdCallingPhone { get; set; }
+
+        public enum ColdCallingPhoneType
+        {
+            [Display(Name = "No Preference")]
+            NoPreference,
+            Yes,
+            No
+        }
 
         [Display(Name = "How do you feel about warm (or cold) calling in person?")]
-        public bool ColdCallingInPerson { get; set; }
+        public ColdCallingPersonType ColdCallingInPerson { get; set; }
+
+        public enum ColdCallingPersonType
+        {
+            [Display(Name = "No Preference")]
+            NoPreference,
+            Yes,
+            No
+        }
 
         // Direct Sales vs Advertising
         [Display(Name = "Which do you prefer?")]
-        public bool DirectVsAdvertising { get; set; }
+        public DirectVsAdvertisingType DirectVsAdvertising { get; set; }
+
+        public enum DirectVsAdvertisingType
+        {
+            [Display(Name = "No Preference")]
+            NoPreference,
+            [Display(Name = "Direct Sales Based")]
+            DirectSales,
+            [Display(Name = "Advertising Based")]
+            Advertising
+        }
 
         [Display(Name = "Which of the following industries interest you?")]
         public string[] IndustryInterestedIn { get; set; }
@@ -86,32 +165,97 @@ namespace GoldChallenge.Models
         public IEnumerable<SelectListItem> ListOfIndustries { get; set; }
 
         [Display(Name = "Do you have an employee preference?")]
-        public bool WhiteVsBlueColar { get; set; }
+        public WhiteVsBlueColarType WhiteVsBlueColar { get; set; }
+
+        public enum WhiteVsBlueColarType
+        {
+            [Display(Name = "No Preference")]
+            NoPreference,
+            [Display(Name = "White Collar")]
+            WhiteColar,
+            [Display(Name = "Blue Collar")]
+            BlueColar
+        }
 
         [Display(Name = "Do you have a concept preference?")]
-        public bool EstablishedVsNewConcept { get; set; }
+        public EstablishedVsNewConceptType EstablishedVsNewConcept { get; set; }
+
+        public enum EstablishedVsNewConceptType
+        {
+            [Display(Name = "No Preference")]
+            NoPreference,
+            [Display(Name = "Established Concept")]
+            EstablishedConcept,
+            [Display(Name = "New Concept")]
+            NewConcept
+        }
 
         [Display(Name = "Do you have a franchise system preference?")]
-        public bool SmallVsLargeFranchiseSystem { get; set; }
+        public SmallVsLargeFranchiseSystemType SmallVsLargeFranchiseSystem { get; set; }
+
+        public enum SmallVsLargeFranchiseSystemType
+        {
+            [Display(Name = "No Preference")]
+            NoPreference,
+            [Display(Name = "Small Franchise System")]
+            Small,
+            [Display(Name = "Large Franchise System")]
+            Large
+        }
 
         [Display(Name = "Which if either do you prefer?")]
-        public bool CompetitiveVsOnlyGameInTown { get; set; }
+        public CompetitiveVsOnlyGameInTownType CompetitiveVsOnlyGameInTown { get; set; }
+
+        public enum CompetitiveVsOnlyGameInTownType
+        {
+            [Display(Name = "No Preference")]
+            NoPreference,
+            [Display(Name = "Competitive Industry")]
+            Competitive,
+            [Display(Name = "Only Game in Town")]
+            OnlyGameInTown
+        }
 
         [Display(Name = "Is prestige important to you?")]
-        public bool PrestigeOrNotImportant { get; set; }
+        public PrestigeOrNotImportantType PrestigeOrNotImportant { get; set; }
+
+        public enum PrestigeOrNotImportantType
+        {
+            [Display(Name = "No Preference")]
+            NoPreference,
+            [Display(Name = "Prestige Important")]
+            PrestigeImportant,
+            [Display(Name = "Not Very Important")]
+            NotImportant
+        }
 
         [Display(Name = "Do you prefer business to business or business to consumer?")]
-        public bool BusinessToBusinessVsBusinessToConsumer { get; set; }
+        public BusinessToBusinessVsBusinessToConsumerType BusinessToBusinessVsBusinessToConsumer { get; set; }
 
-        [Display(Name = "Do you have a preference on hours to work?")]
+        public enum BusinessToBusinessVsBusinessToConsumerType
+        {
+            [Display(Name = "No Preference")]
+            NoPreference,
+            [Display(Name = "Business to Business")]
+            BusinessToBusiness,
+            [Display(Name = "Business to Consumer")]
+            BusinessToConsumer
+            
+        }
+
+        [Display(Name = "Do you have a preference on hours to work?/n Monday-Friday")]
         public bool HoursPreferenceMonFri { get; set; }
 
+        [Display(Name = "No Nights")]
         public bool HoursPreferenceNoNights { get; set; }
 
+        [Display(Name = "No Saturdays")]
         public bool HoursPreferenceNoSaturdays { get; set; }
 
+        [Display(Name = "No Sundays")]
         public bool HoursPreferenceNoSundays { get; set; }
 
+        [Display(Name = "No Preference")]
         public bool HoursPreferenceNoPreference { get; set; }
 
         [Display(Name = "Is there anything else I should know that will help me in finding you the right business?")]

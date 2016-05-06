@@ -4,7 +4,7 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>@ViewBag.Title</h2>
+<h2>Edit</h2>
 
 
 @using (Html.BeginForm())
@@ -20,30 +20,24 @@
         <div class="form-group">
             @Html.LabelFor(model => model.IdealSituation, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.IdealSituation)
-                    @Html.ValidationMessageFor(model => model.IdealSituation, "", new { @class = "text-danger" })
-                </div>
+                @Html.EnumDropDownListFor(model => model.IdealSituation, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.IdealSituation, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.BusinessPreference, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.BusinessPreference)
-                    @Html.ValidationMessageFor(model => model.BusinessPreference, "", new { @class = "text-danger" })
-                </div>
+                @Html.EnumDropDownListFor(model => model.BusinessPreference, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.BusinessPreference, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.StaffSizePreference, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.StaffSizePreference)
-                    @Html.ValidationMessageFor(model => model.StaffSizePreference, "", new { @class = "text-danger" })
-                </div>
+                @Html.EnumDropDownListFor(model => model.StaffSizePreference, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.StaffSizePreference, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -172,90 +166,72 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ColdCallingPhone, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.ColdCallingPhone)
-                    @Html.ValidationMessageFor(model => model.ColdCallingPhone, "", new { @class = "text-danger" })
-                </div>
+                @Html.EnumDropDownListFor(model => model.ColdCallingPhone, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ColdCallingPhone, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.ColdCallingInPerson, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.ColdCallingInPerson)
-                    @Html.ValidationMessageFor(model => model.ColdCallingInPerson, "", new { @class = "text-danger" })
-                </div>
+                @Html.EnumDropDownListFor(model => model.ColdCallingInPerson, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ColdCallingInPerson, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.DirectVsAdvertising, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.DirectVsAdvertising)
-                    @Html.ValidationMessageFor(model => model.DirectVsAdvertising, "", new { @class = "text-danger" })
-                </div>
+                @Html.EnumDropDownListFor(model => model.DirectVsAdvertising, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.DirectVsAdvertising, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.WhiteVsBlueColar, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.WhiteVsBlueColar)
-                    @Html.ValidationMessageFor(model => model.WhiteVsBlueColar, "", new { @class = "text-danger" })
-                </div>
+                @Html.EnumDropDownListFor(model => model.WhiteVsBlueColar, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.WhiteVsBlueColar, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.EstablishedVsNewConcept, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.EstablishedVsNewConcept)
-                    @Html.ValidationMessageFor(model => model.EstablishedVsNewConcept, "", new { @class = "text-danger" })
-                </div>
+                @Html.EnumDropDownListFor(model => model.EstablishedVsNewConcept, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.EstablishedVsNewConcept, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.SmallVsLargeFranchiseSystem, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.SmallVsLargeFranchiseSystem)
-                    @Html.ValidationMessageFor(model => model.SmallVsLargeFranchiseSystem, "", new { @class = "text-danger" })
-                </div>
+                @Html.EnumDropDownListFor(model => model.SmallVsLargeFranchiseSystem, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.SmallVsLargeFranchiseSystem, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.CompetitiveVsOnlyGameInTown, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.CompetitiveVsOnlyGameInTown)
-                    @Html.ValidationMessageFor(model => model.CompetitiveVsOnlyGameInTown, "", new { @class = "text-danger" })
-                </div>
+                @Html.EnumDropDownListFor(model => model.CompetitiveVsOnlyGameInTown, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CompetitiveVsOnlyGameInTown, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.PrestigeOrNotImportant, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.PrestigeOrNotImportant)
-                    @Html.ValidationMessageFor(model => model.PrestigeOrNotImportant, "", new { @class = "text-danger" })
-                </div>
+                @Html.EnumDropDownListFor(model => model.PrestigeOrNotImportant, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.PrestigeOrNotImportant, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.BusinessToBusinessVsBusinessToConsumer, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.BusinessToBusinessVsBusinessToConsumer)
-                    @Html.ValidationMessageFor(model => model.BusinessToBusinessVsBusinessToConsumer, "", new { @class = "text-danger" })
-                </div>
+                @Html.EnumDropDownListFor(model => model.BusinessToBusinessVsBusinessToConsumer, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.BusinessToBusinessVsBusinessToConsumer, "", new { @class = "text-danger" })
             </div>
         </div>
 
