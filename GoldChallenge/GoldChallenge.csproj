@@ -203,6 +203,10 @@
     <Compile Include="Migrations\201605061848375_ChangedPreferences.Designer.cs">
       <DependentUpon>201605061848375_ChangedPreferences.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605101303173_testing.cs" />
+    <Compile Include="Migrations\201605101303173_testing.Designer.cs">
+      <DependentUpon>201605101303173_testing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -326,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605061848375_ChangedPreferences.resx">
       <DependentUpon>201605061848375_ChangedPreferences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605101303173_testing.resx">
+      <DependentUpon>201605101303173_testing.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
